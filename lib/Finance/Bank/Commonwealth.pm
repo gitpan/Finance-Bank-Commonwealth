@@ -6,7 +6,7 @@ BEGIN {
 	use Net::SSLeay();
 	use vars qw($VERSION $debug);
 	$debug = 0;
-	$VERSION = 0.99;
+	$VERSION = 1.00;
 }
 
 my ($defaultUserAgent) = 'Finance::Bank::Commonwealth.pm';
@@ -590,14 +590,14 @@ sub transactions {
 The bpay method allows a payment of $amount to be made from the $from account to the $biller.  The method will return a Finance::Bank::Commonwealth::Success object that gives the date, time and receipt number of the transfer.
 
   $from = new Finance::Bank::Commonwealth::Account({
-                           'bsb' => '063011',
-                           'number' => '10127167',
+                           'bsb' => 'xxx',
+                           'number' => 'yyy',
                            'type' => 'Streamline'
                                   });
 
   my ($biller) = new Finance::Bank::Commonwealth::Biller({ 
-                                  'code' => '8789',
-                                  'ref_no' => '221019047125' });
+                                  'code' => 'xxx',
+                                  'ref_no' => 'yyy' });
 
   my ($success) = $bank->bpay($from, $biller, .50);
   if ($success) {
@@ -782,7 +782,7 @@ David Dick (ddick@cpan.org)
 
 =head1 VERSION
 
-v0.99 released 15 Aug 2002
+v1.00 released 19 Aug 2002
 
 =head1 COPYRIGHT
 

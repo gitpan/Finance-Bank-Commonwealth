@@ -1,0 +1,152 @@
+Finance::Bank::Commonwealth - Front-end to netbank.com.au
+===================================
+
+
+TABLE OF CONTENTS
+-----------------
+
+1.  Description
+2.  Availability
+3.  Prerequisites
+4.  Installation
+5.  Running Tests
+6.  Demonstration Scripts
+8.  Bugs
+9.  Copyright
+10. Author Information
+11. Acknowledgments
+
+
+1. DESCRIPTION
+--------------
+
+Finance::Bank::Commonwealth provides an API to the Commonwealth
+Bank's NetBanking website.  It allows a programmer to automate
+a subset of functionality that the Commonwealth provides, such
+as paying bills and transferring money between accounts.
+
+The functionality depends to a large degree on the whims of the
+developers working for the Commonwealth Bank and EDS.  If they 
+change the HTML, it will cause this module to fail.  If the module
+fails to parse anything that it should parse, it should immediately
+die.  Therefore, catching these exceptions is recommended.  Graham
+Barrs Error module is recommended, or you could just use the 
+try-catch routines described in the Camel Book, or you could just 
+use the old eval statement directly. 
+
+PLEASE, PLEASE, PLEASE, be careful with this program.  It ain't
+guaranteed, it is software, it will have bugs, for someone's sake,
+probably my own, understand what the program does and be comfortable
+with it, BEFORE using it.
+
+This is the initial release.  Subsequent releases will have a 
+Changes file. :)
+
+Current thoughts are revolving around providing a GUI front end to 
+the module, to allow Dad 'n Dave to implement a crude form of EFT 
+for their business, or possibly an Apache module.  Dunno.  See how 
+we go.
+
+If ya wanna give me some suggestions or a bug report (strewth!),
+send an email to ddick@cpan.org.  It'd be great to know that 
+someone else actually uses this. :)
+
+
+2. AVAILABILITY
+---------------
+
+Download the latest version from CPAN, or annoy me until i give you a
+copy. :)
+
+
+3. PREREQUISITES
+----------------
+
+Finance::Bank::Commonwealth has been tested with the following:
+
+    Perl 5.6.1
+
+    Net::SSLeay 1.12
+    LWP 5.5397
+
+
+4. INSTALLATION
+---------------
+
+Please install any modules mentioned in the PREREQUISITES section
+above.  If you don't, Finance::Bank::Commonwealth won't work.  
+When you run "perl Makefile.PL", Perl should complain if any of 
+the required modules are missing.  However, I may have been a
+bit restrictive on the exact versions on the PREREQUISITES.  If
+you think so, modify the Makefile.PL to allow the lower version,
+and if it works, let me know.
+
+To build this module, run the following commands:
+
+    perl Makefile.PL
+    make
+    make install
+
+
+5. RUNNING TESTS
+----------------
+
+To-Do... whoops... :)
+
+6. DEMONSTRATION SCRIPTS
+------------------------
+
+There are a few demonstration scripts in the demo/ directory. 
+
+The author would be happy to include any contributed scripts in
+future versions of this module.  All I ask is that they be documented
+(preferably using POD) and that the contributor's name and contact
+information be mentioned somewhere.
+
+
+8. BUGS
+-------
+
+Finance::Bank::Commonwealth has just been released and like all 
+software probably has a few gotchas hidden deep inside.  What makes this 
+worse is the fact that it is stuffing around with your money.  
+
+If you find a bug, please report it to the author along with the
+following information:
+
+    * version of Perl (output of 'perl -V' is best)
+    * version of Finance::Bank::Commonwealth
+    * operating system type and version
+    * version of nameserver (if known)
+    * exact text of error message or description of problem
+    * the shortest possible program that exhibits the problem
+
+If I don't have access to a system similar to yours, I may ask you
+to insert some debugging lines and report back on the results.
+The more help and information you can provide, the better.
+
+9. COPYRIGHT
+-------------
+
+Copyright (c) 2002 David Dick.  All rights reserved.  This
+program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+
+10. AUTHOR INFORMATION
+----------------------
+
+Finance::Bank::Commonwealth was created by:
+	David Dick
+	ddick@cpan.org
+
+11. ACKNOWLEDGMENTS
+-------------------
+
+Thanks to the developers of Net::DNS who i shamelessly adapted
+this README from. :)
+
+Thanks to Larry Wall and all who have made Perl possible.
+
+----
+$Id: README,v 1.00 2002/08/16 11:11:11 ddick Exp $

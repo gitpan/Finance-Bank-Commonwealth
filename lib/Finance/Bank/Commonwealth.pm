@@ -6,7 +6,7 @@ BEGIN {
 	use Net::SSLeay();
 	use vars qw($VERSION $debug);
 	$debug = 0;
-	$VERSION = 0.98;
+	$VERSION = 0.99;
 }
 
 my ($defaultUserAgent) = 'Finance::Bank::Commonwealth.pm';
@@ -782,7 +782,7 @@ David Dick (ddick@cpan.org)
 
 =head1 VERSION
 
-v0.98 released 15 Aug 2002
+v0.99 released 15 Aug 2002
 
 =head1 COPYRIGHT
 

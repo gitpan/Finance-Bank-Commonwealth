@@ -7,3 +7,4 @@ demo/bpay.pl
 demo/transactions.pl
 demo/transfer.pl
 lib/Finance/Bank/Commonwealth.pm
+t/use.t
